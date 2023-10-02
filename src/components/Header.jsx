@@ -33,7 +33,7 @@ export const Header = () => {
                     </div>
 
                     <div className='relative'>
-                        <button><i className="far fa-shopping-bag text-2xl"></i></button>
+                        <Link to={"/carrito"}><i className="far fa-shopping-bag text-2xl"></i></Link>
                         <p className='text-sm h-6 w-6 rounded-full border-[1px] bg-black text-white flex justify-center items-center absolute -top-1 right-0 left-5'>2</p>
                     </div>
 

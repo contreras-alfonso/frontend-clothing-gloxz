@@ -7,6 +7,7 @@ import {
 } from "react-router-dom";
 import { LayoutPublico } from './layouts/LayoutPublico';
 import { Index } from './pages/Index';
+import { Carrito } from './pages/Carrito';
 
 const router = createBrowserRouter([
   {
@@ -16,6 +17,10 @@ const router = createBrowserRouter([
       {
         index:true,
         element: <Index/>
+      },
+      {
+        path:'/carrito',
+        element: <Carrito/>
       }
     ]
   },
