@@ -5,14 +5,23 @@ import ModalLogin from './ModalLogin';
 export const Header = () => {
 
     const [modalLogin,setModalLogin] = useState(false);
+    const [shadow,setShadow] = useState(false);
 
     const estadoModalLogin = () => {
         setModalLogin(!modalLogin);
     }
 
+    window.addEventListener('scroll',()=>{
+        if(scrollY>100){
+            setShadow(true);
+            return;
+        }
+        setShadow(false);
+    })
+
   return (
     <>
-        <header className='bg-white shadow-lg fixed top-0 w-full z-40'>
+        <header className={`bg-white fixed top-0 w-full z-40 ${shadow && 'shadow-lg'} transition-all duration-300`}>
             <div className='w-11/12 mx-auto py-5 flex flex-row justify-between items-center '>
                 <ul className='flex gap-5 flex-grow basis-0'>
                     <li><Link>Inicio</Link></li>
