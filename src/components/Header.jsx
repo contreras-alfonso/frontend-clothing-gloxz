@@ -1,11 +1,13 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import ModalLogin from './ModalLogin';
+import ListaCarrito from './ListaCarrito';
 
 export const Header = () => {
 
     const [modalLogin,setModalLogin] = useState(false);
     const [shadow,setShadow] = useState(false);
+    const [listCart,setListCart] = useState(false);
 
     const estadoModalLogin = () => {
         setModalLogin(!modalLogin);
@@ -34,15 +36,15 @@ export const Header = () => {
 
                 <div className='flex gap-7 flex-grow justify-end basis-0'>
 
-                    <button onClick={estadoModalLogin}><i class="fa-regular fa-user text-2xl"></i></button>
+                    <button onClick={estadoModalLogin}><i className="fa-regular fa-user text-2xl"></i></button>
 
                     <div className='relative'>
-                        <button><i class="fa-regular fa-heart text-2xl"></i></button>
+                        <button><i className="fa-regular fa-heart text-2xl"></i></button>
                         <p className='text-sm h-6 w-6 rounded-full border-[1px] bg-black text-white flex justify-center items-center absolute -top-1 right-0 left-5'>5</p>
                     </div>
 
                     <div className='relative'>
-                        <Link to={"/carrito"}><i className="far fa-shopping-bag text-2xl"></i></Link>
+                        <button onClick={()=>{setListCart(!listCart)}}><i className="far fa-shopping-bag text-2xl"></i></button>
                         <p className='text-sm h-6 w-6 rounded-full border-[1px] bg-black text-white flex justify-center items-center absolute -top-1 right-0 left-5'>2</p>
                     </div>
 
@@ -52,6 +54,7 @@ export const Header = () => {
 
         </header>
         <ModalLogin modalLogin={modalLogin} setModalLogin={setModalLogin}/>
+        <ListaCarrito listCart={listCart} setListCart={setListCart}/>
     </>
   )
 }

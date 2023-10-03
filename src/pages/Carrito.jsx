@@ -6,7 +6,7 @@ export const Carrito = () => {
     <div className='w-10/12 mx-auto'>
         <div className='mt-40 flex flex-row gap-3'>
             <button>Home</button>
-            <span><i class="fa-light fa-angle-right text-slate-500 text-sm"></i></span>
+            <span><i className="fa-light fa-angle-right text-slate-500 text-sm"></i></span>
             <button className='text-slate-500'>Tu carrito</button>
         </div>
 {/* aplicar flex a carrito y resumen */}
@@ -36,7 +36,7 @@ export const Carrito = () => {
                             <p>Flat rate: $50.00</p>
                             <p>Local pickup: $60.00</p>
                             <p className='text-slate-500'>Shipping options will be updated during checkout.</p>
-                            <button className='hover:text-rose-600'>Calculate shipping <i class="fa-regular fa-location-dot"></i></button>
+                            <button className='hover:text-rose-600'>Calculate shipping <i className="fa-regular fa-location-dot"></i></button>
                         </div>
 
                         <div className='flex flex-col p-5 gap-5'>

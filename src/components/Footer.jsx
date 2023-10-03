@@ -23,7 +23,7 @@ export const Footer = () => {
                 <a href="#">Return My Order</a>
                 <a href="#">Refer a Friend</a>
             </div>
-            <div>
+            <div className='flex flex-col gap-3'>
                 <h2 className='font-semibold'>Newsletter</h2>
                 <p>Sign up now to get first update about our new collection.</p>
                 <div className='border-b-[1px] border-black flex flex-row gap-3 w-fit p-3'>
@@ -35,13 +35,13 @@ export const Footer = () => {
         
 
         </div>
-        <hr class="border-t border-gray-200 my-4"/>
+        <hr className="border-t border-gray-200 my-4"/>
         <div className='w-3/4 mx-auto flex flex-row justify-between py-10'>
             <p className='text-gray-500'>© 2023 Lino All rights reserved.</p>
             <div className='flex flex-row gap-5'>
-                <a href="#"><i class="fa-brands fa-facebook text-black text-xl"></i></a>
-                <a href="#"><i class="fa-brands fa-x-twitter text-black text-xl"></i></a>
-                <a href="#"><i class="fa-brands fa-square-instagram text-black text-xl"></i></a>
+                <a href="#"><i className="fa-brands fa-facebook text-black text-xl"></i></a>
+                <a href="#"><i className="fa-brands fa-x-twitter text-black text-xl"></i></a>
+                <a href="#"><i className="fa-brands fa-square-instagram text-black text-xl"></i></a>
             </div>
         </div>
     </footer>
