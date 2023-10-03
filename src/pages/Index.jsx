@@ -19,8 +19,10 @@ export const Index = () => {
 
           <div className='absolute top-0 bottom-0 right-0 left-0 w-screen z-10 h-full'>
               {/* <img className='object-center absolute z-10 h-full' src="/images/banner.png" alt="banner"/> */}
-              <video className='object-center object-cover h-full w-full' src="/videos/banner.mp4" autoPlay={true} muted loop={true}></video>
+              <video className='object-center object-cover h-full w-full relative' src="/videos/banner.mp4" autoPlay={true} muted loop={true}></video>
+              <div className="absolute top-0 bottom-0 right-0 left-0 bg-black/60"></div>
           </div>
+
 
       </div>
 
