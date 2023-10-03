@@ -8,6 +8,7 @@ import {
 import { LayoutPublico } from './layouts/LayoutPublico';
 import { Index } from './pages/Index';
 import { Carrito } from './pages/Carrito';
+import { Producto } from './pages/Producto';
 
 const router = createBrowserRouter([
   {
@@ -21,6 +22,10 @@ const router = createBrowserRouter([
       {
         path:'/carrito',
         element: <Carrito/>
+      },
+      {
+        path:'/producto/:id',
+        element: <Producto/>
       }
     ]
   },

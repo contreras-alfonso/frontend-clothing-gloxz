@@ -6,7 +6,7 @@ export const Index = () => {
   return (
 
     <>
-      <div class="bg-black h-screen  text-center overflow-hidden relative flex flex-col items-center justify-center">
+      <div className="bg-black h-screen  text-center overflow-hidden relative flex flex-col items-center justify-center">
 
           <div className='z-30 relative flex flex-col items-center justify-center gap-10'>
               <div className='space-y-2'>
@@ -19,7 +19,7 @@ export const Index = () => {
 
           <div className='absolute top-0 bottom-0 right-0 left-0 w-screen z-10 h-full'>
               {/* <img className='object-center absolute z-10 h-full' src="/images/banner.png" alt="banner"/> */}
-              <video className='object-center object-cover h-full w-full relative' src="/videos/banner.mp4" autoPlay={true} muted loop={true}></video>
+              <video className='object-center object-cover h-full w-full relative' src="/videos/banner3.mp4" autoPlay={true} muted loop={true}></video>
               <div className="absolute top-0 bottom-0 right-0 left-0 bg-black/60"></div>
           </div>
 

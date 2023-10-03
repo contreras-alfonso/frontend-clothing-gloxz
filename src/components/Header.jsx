@@ -14,7 +14,7 @@ export const Header = () => {
     }
 
     window.addEventListener('scroll',()=>{
-        if(scrollY>100){
+        if(scrollY>20){
             setShadow(true);
             return;
         }

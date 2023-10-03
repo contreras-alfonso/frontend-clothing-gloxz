@@ -1,19 +1,20 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 export const CardClothes = () => {
   return (
     <div className='flex flex-col gap-5 py-10'>
 
 
-      <div class="relative group">
-        <img src="/images/product1.png" alt="Producto 1" class="w-full h-auto"/>
+      <div className="relative group">
+        <img src="/images/product1.png" alt="Producto 1" className="w-full h-auto"/>
         
-        <div class="absolute top-0 left-0 w-full h-full opacity-0 group-hover:opacity-100 transition duration-300">
-          <img src="/images/product1-hover.png" alt="Producto 1" class="w-full h-auto"/>
+        <div className="absolute top-0 left-0 w-full h-full opacity-0 group-hover:opacity-100 transition duration-300">
+          <img src="/images/product1-hover.png" alt="Producto 1" className="w-full h-auto"/>
           
-          <button class="absolute w-11/12 bottom-2 left-2 rounded text-white bg-black  py-3 px-10 transition-all duration-300 hover:bg-amber-700/70 ">
+          <a href={'/producto/1'} className="text-center absolute w-11/12 bottom-2 left-2 rounded text-white bg-black  py-3 px-10 transition-all duration-300 hover:bg-amber-700/70 ">
             Ver Producto
-          </button>
+          </a>
         </div>
       </div>
 

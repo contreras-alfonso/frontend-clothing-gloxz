@@ -4,10 +4,10 @@ import { ElementoCarrito } from '../components/ElementoCarrito'
 export const Carrito = () => {
   return (
     <div className='w-10/12 mx-auto'>
-        <div className='mt-40 flex flex-row gap-3'>
-            <button>Home</button>
+        <div className='mt-24 flex flex-row gap-3 py-5'>
+            <button className='text-sm'>Home</button>
             <span><i className="fa-light fa-angle-right text-slate-500 text-sm"></i></span>
-            <button className='text-slate-500'>Tu carrito</button>
+            <button className='text-sm text-slate-500'>Tu carrito</button>
         </div>
 {/* aplicar flex a carrito y resumen */}
         <div className='flex gap-10'>
