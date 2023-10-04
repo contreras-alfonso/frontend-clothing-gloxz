@@ -2,12 +2,14 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import ModalLogin from './ModalLogin';
 import ListaCarrito from './ListaCarrito';
+import ListaFavoritos from './ListaFavoritos';
 
 export const Header = () => {
 
     const [modalLogin,setModalLogin] = useState(false);
     const [shadow,setShadow] = useState(false);
     const [listCart,setListCart] = useState(false);
+    const [listFavorites,setListFavorites] = useState(false);
 
     const estadoModalLogin = () => {
         setModalLogin(!modalLogin);
@@ -39,7 +41,7 @@ export const Header = () => {
                     <button onClick={estadoModalLogin}><i className="fa-regular fa-user text-2xl"></i></button>
 
                     <div className='relative'>
-                        <button><i className="fa-regular fa-heart text-2xl"></i></button>
+                        <button onClick={()=>{setListFavorites(!listFavorites)}}><i className="fa-regular fa-heart text-2xl"></i></button>
                         <p className='text-sm h-6 w-6 rounded-full border-[1px] bg-black text-white flex justify-center items-center absolute -top-1 right-0 left-5'>5</p>
                     </div>
 
@@ -55,6 +57,7 @@ export const Header = () => {
         </header>
         <ModalLogin modalLogin={modalLogin} setModalLogin={setModalLogin}/>
         <ListaCarrito listCart={listCart} setListCart={setListCart}/>
+        <ListaFavoritos listFavorites={listFavorites} setListFavorites={setListFavorites}/>
     </>
   )
 }

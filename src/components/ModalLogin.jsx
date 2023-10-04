@@ -49,8 +49,8 @@ export default function ModalLogin({modalLogin, setModalLogin}) {
                             Login
                         </Dialog.Title>
                         <div className='flex flex-col gap-5'>
-                            <input className='p-3 border-[1px] border-slate-200 focus:outline-none' type="text" placeholder='Email'/>
-                            <input className='p-3 border-[1px] border-slate-200 focus:outline-none' type="password" placeholder='Password'/>
+                            <input className='p-3 border-[1px] border-slate-200 focus:outline-none text-[15px]' type="text" placeholder='Email'/>
+                            <input className='p-3 border-[1px] border-slate-200 focus:outline-none text-[15px]' type="password" placeholder='Password'/>
                         </div>
 
                         <div className=''>
