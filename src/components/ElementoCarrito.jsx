@@ -3,7 +3,7 @@ import React from 'react'
 export const ElementoCarrito = () => {
   return (
     <div className='border-t-[1px] border-slate-200'>
-        <div className='flex justify-between py-3 px-5'>
+        <div className='flex justify-between py-3'>
 
             <div className='flex flex-row items-center gap-10'>
                 <img className='w-32' src="/images/product1-hover.png" alt="q" />
