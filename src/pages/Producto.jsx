@@ -45,9 +45,9 @@ export const Producto = () => {
                     <p>Quantity</p>
                     <div className='flex gap-2'>
                         <div className='flex items-center gap-4 border-[1px] border-slate-200 w-fit'>
-                                <button className='px-5'><i class="fa-solid fa-minus"></i></button>
+                                <button className='px-5'><i className="fa-solid fa-minus"></i></button>
                                 <span className=''>4</span>
-                                <button className='px-5'><i class="fa-solid fa-plus"></i></button>
+                                <button className='px-5'><i className="fa-solid fa-plus"></i></button>
                         </div>
                         <button onClick={()=>{setModalProductoAgregado(!modalProductoAgregado)}} className='w-fit rounded border-black border-[1px] py-3 px-10 transition-all duration-300 bg-black text-white hover:bg-white hover:text-black text-sm'>Add to cart</button>
                         <button className='w-fit rounded hover:border-black border-amber-700/70 border-[1px] py-3 px-10 transition-all duration-300 bg-amber-700/70 text-white hover:bg-white hover:text-black text-sm'>Buy Now</button>
