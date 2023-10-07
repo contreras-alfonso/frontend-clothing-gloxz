@@ -9,6 +9,8 @@ import { LayoutPublico } from './layouts/LayoutPublico';
 import { Index } from './pages/Index';
 import { Carrito } from './pages/Carrito';
 import { Producto } from './pages/Producto';
+import { LayoutPrivado } from './layouts/LayoutPrivado';
+import { IndexPrivate } from './pages/Private/IndexPrivate';
 
 const router = createBrowserRouter([
   {
@@ -29,6 +31,17 @@ const router = createBrowserRouter([
       }
     ]
   },
+
+  {
+    path:'/administration',
+    element: <LayoutPrivado/>,
+    children:[
+      {
+        index:true,
+        element: <IndexPrivate/>
+      }
+    ]
+  }
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
