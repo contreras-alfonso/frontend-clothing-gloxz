@@ -6,7 +6,7 @@ export const HombresPantalones = () => {
     <div className='p-10 bg-white w-full'>
       <div className='flex items-center mb-10 gap-3'>
         <h1 className='text-3xl font-black mb-3'>Hombres</h1>
-        <h2 className='font-medium'><i class="fa-regular fa-tags"></i> Pantalones</h2>
+        <h2 className='font-medium'><i className="fa-regular fa-tags"></i> Pantalones</h2>
       </div>
 
 

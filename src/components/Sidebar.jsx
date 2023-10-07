@@ -80,7 +80,12 @@ export const Sidebar = () => {
                             {menu.icnonoImg}
                             <span className={`text-sm flex-1 ${!open && 'hidden'}`}>{menu.title}</span>
                             {menu?.submenuItems && (
-                                <button className={`${!open && 'hidden'}`} onClick={()=>{menu.setSubmenuState(!menu.submenuState )}}><i className="fa-sharp fa-solid fa-chevron-down"></i></button>
+                                <button className={`${!open && 'hidden'}`} onClick={()=>{menu.setSubmenuState(!menu.submenuState )}}>
+                                    {menu.submenuState 
+                                    ? <i className="fa-solid fa-chevron-up"></i> 
+                                    : <i className="fa-sharp fa-solid fa-chevron-down"></i>
+                                    }
+                                </button>
                             )}
 
                         </li>
