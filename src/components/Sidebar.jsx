@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 export const Sidebar = () => {
 
@@ -7,6 +7,11 @@ export const Sidebar = () => {
     const [submenuOpen,setSubmenuOpen] = useState(false);
     const [submenuOpen2,setSubmenuOpen2] = useState(false);
     const [submenuOpen3,setSubmenuOpen3] = useState(false);
+
+    const {pathname} = useLocation();
+
+    console.log(pathname.split('/')[2])
+    console.log(pathname.split('/')[3])
 
     const menus = [
         {
@@ -50,10 +55,10 @@ export const Sidebar = () => {
         <div className='flex items-center gap-3'>
             {/* <i className={`fa-solid fa-shop block float-left duration-500 text-3xl mr-5 ${open && "rotate-[360deg]"}`}></i>
             <h1 className={`text-3xl font-bold ${!open && 'scale-0'}`}>Gloxz</h1> */}
-            <img className='w-14 h-14 rounded-full' src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="" />
+            <img className='w-10 rounded-full' src="/images/logo.png" alt="" />
             <div className={`${!open && 'scale-0'}`}>
-                <h2 className='text-xs text-gray-500 uppercase'>WEB DEVELOPER</h2>
-                <p className='text-sm'>John Doe</p>
+                <h2 className='text-xs text-gray-500 uppercase'>ADMINISTRADOR</h2>
+                <p className='text-sm'>Alfonso Contreras</p>
             </div>
         </div>
 
@@ -71,7 +76,7 @@ export const Sidebar = () => {
                         </Link>
                     :
                     <>
-                        <li onClick={menu?.submenuItems ? ()=>{menu.setSubmenuState(!menu.submenuState)} : ()=>{}} className='text-black/80 text-sm flex items-center justify-center gap-4 cursor-pointer p-2 px-4 hover:bg-black/80 hover:text-white rounded-lg mt-2'>
+                        <li onClick={menu?.submenuItems ? ()=>{menu.setSubmenuState(!menu.submenuState)} : ()=>{}} className={`text-black/80 text-sm flex items-center justify-center gap-4 cursor-pointer p-2 px-4 hover:bg-blue-500/90 hover:text-white rounded-lg mt-2 ${pathname.split('/')[2]===menu.title.toLowerCase() && 'bg-blue-500/90 text-white'}`}>
                             {menu.icnonoImg}
                             <span className={`text-sm flex-1 ${!open && 'hidden'}`}>{menu.title}</span>
                             {menu?.submenuItems && (
@@ -83,7 +88,7 @@ export const Sidebar = () => {
                         {menu.submenuItems && menu.submenuState && open && (
                             <ul className='mt-2'>
                                 {menu.submenuItems.map((e,index)=>{return (
-                                    <li key={index} className='text-black text-sm flex items-center gap-4 cursor-pointer p-2 px-5 hover:bg-gray-200/60 rounded'>{e}</li>
+                                    <li key={index} className={`mt-1 text-black text-sm flex items-center gap-4 cursor-pointer p-2 px-5 hover:bg-gray-200/60 rounded ${pathname.split('/')[3]===e.toLowerCase() && 'bg-gray-200/60'}`}>{e}</li>
                                 )})}
 
                             </ul>

@@ -11,6 +11,7 @@ import { Carrito } from './pages/Carrito';
 import { Producto } from './pages/Producto';
 import { LayoutPrivado } from './layouts/LayoutPrivado';
 import { IndexPrivate } from './pages/Private/IndexPrivate';
+import { HombresPantalones } from './pages/Private/HombresPantalones';
 
 const router = createBrowserRouter([
   {
@@ -39,6 +40,15 @@ const router = createBrowserRouter([
       {
         index:true,
         element: <IndexPrivate/>
+      },
+      {
+        path:'hombres',
+        children:[
+          {
+            path:'pantalones',
+            element: <HombresPantalones/>
+          }
+        ]
       }
     ]
   }

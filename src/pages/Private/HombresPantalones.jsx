@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-export const IndexPrivate = () => {
+export const HombresPantalones = () => {
   return (
     <div className='p-10 bg-white w-full'>
       <div className='flex items-center mb-10 gap-3'>
@@ -82,13 +82,13 @@ export const IndexPrivate = () => {
       </div>
 
       <div className='w-fit mx-auto flex items-center gap-4 mt-20'>
-        <Link className='p-5 rounded-full w-1 h-1 flex items-center justify-center hover:bg-blue-500/90 hover:text-white'><i className="fa-solid fa-arrow-left"></i></Link>
+        <Link className='bg-blue-500/90 p-5 rounded-full w-1 h-1 flex items-center justify-center text-white'><i className="fa-solid fa-arrow-left"></i></Link>
         <Link className='p-5 rounded-full w-1 h-1 flex items-center justify-center hover:bg-blue-500/90 hover:text-white'>1</Link>
         <Link className='bg-blue-500/90 p-5 rounded-full w-1 h-1 flex items-center justify-center text-white'>2</Link>
         <Link className='p-5 rounded-full w-1 h-1 flex items-center justify-center hover:bg-blue-500/90 hover:text-white'>3</Link>
         <Link className='p-5 rounded-full w-1 h-1 flex items-center justify-center hover:bg-blue-500/90 hover:text-white'>...</Link>
         <Link className='p-5 rounded-full w-1 h-1 flex items-center justify-center hover:bg-blue-500/90 hover:text-white'>10</Link>
-        <Link className='p-5 rounded-full w-1 h-1 flex items-center justify-center hover:bg-blue-500/90 hover:text-white'><i className="fa-sharp fa-solid fa-arrow-right"></i></Link>
+        <Link className='bg-blue-500/90 p-5 rounded-full w-1 h-1 flex items-center justify-center text-white'><i className="fa-sharp fa-solid fa-arrow-right"></i></Link>
       </div>
     </div>
   )
