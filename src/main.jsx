@@ -12,6 +12,7 @@ import { Producto } from './pages/Producto';
 import { LayoutPrivado } from './layouts/LayoutPrivado';
 import { IndexPrivate } from './pages/Private/IndexPrivate';
 import { HombresPantalones } from './pages/Private/HombresPantalones';
+import { AgregarPantalonHombres } from './pages/Private/AgregarPantalonHombres';
 
 const router = createBrowserRouter([
   {
@@ -47,6 +48,9 @@ const router = createBrowserRouter([
           {
             path:'pantalones',
             element: <HombresPantalones/>
+          },{
+            path: 'nuevo-pantalon',
+            element: <AgregarPantalonHombres/>
           }
         ]
       }

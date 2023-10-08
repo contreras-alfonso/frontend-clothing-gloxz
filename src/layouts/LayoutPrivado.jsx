@@ -6,7 +6,9 @@ export const LayoutPrivado = () => {
   return (
     <main className='flex'>
         <Sidebar/>
-        <Outlet/>
+        <div className='p-10 bg-white w-full'>
+          <Outlet/>
+        </div>
     </main>
   )
 }

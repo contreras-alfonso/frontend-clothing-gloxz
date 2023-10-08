@@ -76,7 +76,7 @@ export const Sidebar = () => {
                         </Link>
                     :
                     <>
-                        <li onClick={menu?.submenuItems ? ()=>{menu.setSubmenuState(!menu.submenuState)} : ()=>{}} className={`text-black/80 text-sm flex items-center justify-center gap-4 cursor-pointer p-2 px-4 hover:bg-blue-500/90 hover:text-white rounded-lg mt-2 ${pathname.split('/')[2]===menu.title.toLowerCase() && 'bg-blue-500/90 text-white'}`}>
+                        <li onClick={menu?.submenuItems ? ()=>{menu.setSubmenuState(!menu.submenuState)} : ()=>{}} className={`text-black/80 text-sm flex items-center justify-center gap-4 cursor-pointer p-2 px-4 hover:bg-black hover:text-white rounded-lg mt-2 ${pathname.split('/')[2]===menu.title.toLowerCase() && 'bg-black text-white'}`}>
                             {menu.icnonoImg}
                             <span className={`text-sm flex-1 ${!open && 'hidden'}`}>{menu.title}</span>
                             {menu?.submenuItems && (
