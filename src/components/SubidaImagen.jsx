@@ -2,7 +2,7 @@ import React from 'react'
 
 export const SubidaImagen = ({title,selectedImages,setSelectedImages,onSelectFile}) => {
   return (
-    <section className='bg-white p-10 shadow rounded-lg border-[1px] border-slate-100 mb-5'>
+    <section className='bg-white p-10 rounded-lg border-[1px] border-slate-100 mb-5  shadow-lg'>
         <h2 className='font-light  mb-10 bg-color-principal text-white text-center w-fit p-2 px-5 text-sm rounded-lg'>{title}</h2>
         <div className='w-1/2 mx-auto'>
             

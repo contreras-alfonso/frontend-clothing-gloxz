@@ -48,7 +48,7 @@ export const Sidebar = () => {
 
   return (
 
-    <div className={`bg-color-principal h-screen text-white p-5 pt-8 relative duration-300 ${open ? 'w-80 ' : 'w-20'}`}>
+    <div className={`bg-color-principal h-screen text-white p-4 pt-8 relative duration-300 ${open ? 'w-80 ' : 'w-20'}`}>
 
         <button onClick={()=>{setOpen(!open)}} className='text-color-principal rounded-full bg-white text-black/80 p-4 w-1 h-1 flex items-center justify-center absolute -right-3 top-9 border border-gray-300'>{open ? <i className="fa-solid fa-chevron-left"></i> : <i className="fa-solid fa-chevron-right"></i>}</button>
 
@@ -76,7 +76,7 @@ export const Sidebar = () => {
                         </Link>
                     :
                     <>
-                        <li onClick={menu?.submenuItems ? ()=>{menu.setSubmenuState(!menu.submenuState)} : ()=>{}} className={`text-white text-sm flex items-center justify-center gap-4 cursor-pointer p-2 px-4 hover:bg-color_principal_hover hover:text-white rounded-lg mt-2 ${pathname.split('/')[2]===menu.title.toLowerCase() && 'bg-color_principal_hover text-white'}`}>
+                        <li onClick={menu?.submenuItems ? ()=>{menu.setSubmenuState(!menu.submenuState)} : ()=>{}} className={`text-white text-sm flex items-center justify-center gap-4 cursor-pointer p-2 px-6 hover:bg-color_principal_hover hover:text-white rounded-lg mt-2 ${pathname.split('/')[2]===menu.title.toLowerCase() && 'bg-color_principal_hover text-white'}`}>
                             {menu.icnonoImg}
                             <span className={`text-sm flex-1 ${!open && 'hidden'}`}>{menu.title}</span>
                             {menu?.submenuItems && (

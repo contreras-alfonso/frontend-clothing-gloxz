@@ -1,10 +1,12 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useForm } from '../../hooks/useForm';
 import { useImage } from '../../hooks/useImage';
 import { SubidaImagen } from '../../components/SubidaImagen';
 import { FormAgregarProducto } from '../../components/FormAgregarProducto';
+import { TitleSeccion } from '../../components/TitleSeccion';
 
 export const AgregarPantalonHombres = () => {
+
 
     const hadnleSubmit = async (e) => {
         e.preventDefault();
@@ -15,14 +17,18 @@ export const AgregarPantalonHombres = () => {
         const url = `http://localhost:4000/api/productos/nuevo-producto`;
         const formData = new FormData();
 
-        fileListProducto.map(e=>{
-          formData.append('producto',e);
+        colors.map(color=>{
+          colorProps[color].fileList.map(e=>{
+            formData.append(`images${color}`,e);
+          })
         })
 
-        fileListModelo.map(e=>{
-          formData.append('modelo',e);
-        })
-    
+        formData.append('marca',values.marca);
+        formData.append('nombre',values.nombre);
+        formData.append('descripcion',values.descripcion);
+        formData.append('precio',values.precio);
+        formData.append('sku',values.sku);
+
         const response = await fetch(url,{
           method:'POST',
           body: formData,
@@ -30,38 +36,49 @@ export const AgregarPantalonHombres = () => {
         
     }
 
-    const {values, handleChange} = useForm({nombre:'',descripcion:'',precio:'',sku:'',stock:''});
+    const {values, handleChange} = useForm({marca:'',nombre:'',descripcion:'',precio:'',sku:'',stock:''});
 
-    const {selectedImages:selectedImagesProducto,setSelectedImages:setSelectedImagesProducto,onSelectFile:onSelectFileProducto,fileList:fileListProducto} = useImage([]);
-    const {selectedImages:selectedImagesModelo,setSelectedImages:setSelectedImagesModelo,onSelectFile:onSelectFileModelo,fileList:fileListModelo} = useImage([]);
     
+
+    const colors = ["Verde", "Marron", "Azul", "Beige", "Gris", "Blanco", "Rojo", "Amarillo"];
+
+    const colorProps = {};
+
+    colors.forEach((color) => {
+      const {
+        selectedImages,
+        setSelectedImages,
+        onSelectFile,
+        fileList,
+      } = useImage([]);
+
+      colorProps[color] = {
+        selectedImages,
+        setSelectedImages,
+        onSelectFile,
+        fileList,
+      };
+    });
+
 
   return (
     <div className='overflow-y-auto'>
 
-    <div className='flex justify-between mb-4 bg-white py-5 px-5 rounded-xl shadow-lg'>
-        <div className='flex items-center gap-3'>
-          <h1 className='text-3xl font-black text-color-principal'>Hombres</h1>
-          <h2 className='font-medium text-color-principal'><i className="fa-regular fa-tags "></i> Nuevo Producto - Pantalón</h2>
-        </div>
-
-          <div className='flex items-center gap-3'>
-            <div className={`${!open && 'scale-0'}`}>
-                <h2 className='text-xs text-gray-500 uppercase'>ADMINISTRADOR</h2>
-                <p className=' text-sm text-color-principal font-bold'>Alfonso Contreras</p>
-            </div>
-            <img className='w-10 h-10 rounded-full' src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80" alt="qwewq" />
-          </div>
-
-      </div>
-
+        <TitleSeccion seccion={'Hombres'} subseccion={'Nuevo Producto - Pantalón'}/>
         <form onSubmit={hadnleSubmit} action="">
+
           <FormAgregarProducto values={values} handleChange={handleChange}/>
+
+          {colors.map((color,index) => (
+            <SubidaImagen
+              key={color}
+              title={`${index+2}. Selecciona las imágenes del color ${color}`}
+              selectedImages={colorProps[color].selectedImages}
+              setSelectedImages={colorProps[color].setSelectedImages}
+              onSelectFile={colorProps[color].onSelectFile}
+            />
+          ))}
           
-          <SubidaImagen title={'2. Selecciona las imagenes que solo contienen el producto.'} selectedImages={selectedImagesProducto} setSelectedImages={setSelectedImagesProducto} onSelectFile={onSelectFileProducto}/>
-
-           <SubidaImagen title={'3. Selecciona las imagenes que solo contienen el modelo del producto.'} selectedImages={selectedImagesModelo} setSelectedImages={setSelectedImagesModelo} onSelectFile={onSelectFileModelo}/>
-
           <div className='flex justify-end'>
             <button type='submit' className='w-full rounded-full py-4 px-10   duration-300 text-sm bg-color-principal hover:bg-color-principal/80 text-white'>Agregar Producto</button>
           </div>

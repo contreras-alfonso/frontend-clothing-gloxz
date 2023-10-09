@@ -21,7 +21,7 @@ export const Producto = () => {
 
             <div className='flex gap-10 py-5'>
                 <div className='w-1/2 '>
-                    <img className='w-4/5 h-4/5 mx-auto' src="/images/img.png" alt="image" />
+                    <img className='w-4/5 h-4/5 mx-auto' src="https://falabella.scene7.com/is/image/FalabellaPE/882845642_2?wid=1004&hei=1500&crop=248,0,1004,1500&qlt=70" alt="image" />
                 </div>
                 <div className='w-1/2 space-y-3'>
                     <h2 className='text-sm font-medium'><span className='text-red-500'><i className="fa-regular fa-eye"></i> 24 guests</span> viewing this product</h2>

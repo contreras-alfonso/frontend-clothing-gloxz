@@ -22,9 +22,9 @@ export const HombresPantalones = () => {
 
 
       <div className='mb-4 flex justify-between items-center bg-white py-4 px-5 rounded-xl shadow-lg'>
-        <Link to={'/administration/hombres/nuevo-pantalon'} className='rounded-xl py-3 px-5 border border-dashed border-color-principal text-color-principal duration-300 text-sm hover:bg-color-principal hover:text-white'><i class="fa-solid fa-cloud-plus"></i> Nuevo Producto</Link>
+        <Link to={'/administration/hombres/nuevo-pantalon'} className='rounded-xl py-3 px-5 border border-dashed border-color-principal text-color-principal duration-300 text-sm hover:bg-color-principal hover:text-white'><i className="fa-solid fa-cloud-plus"></i> Nuevo Producto</Link>
         <div className='bg-color_bg px-4 py-1 rounded-xl flex gap-2 items-center text-black'>
-          <button><i class="fa-solid fa-magnifying-glass text-color-principal"></i></button>
+          <button><i className="fa-solid fa-magnifying-glass text-color-principal"></i></button>
           <input className='p-2 text-sm focus:outline-none bg-transparent' type="text" placeholder='Search'/>
         </div>
       </div>
@@ -35,10 +35,10 @@ export const HombresPantalones = () => {
 
             <thead className='bg-color-principal'>
               <tr className=''>
-                <td className='font-medium p-4 text-base text-white'>Product</td>
-                <td className='font-medium p-4 text-base text-white'>Views</td>
+                <td className='font-medium p-4 text-base text-white'>Producto</td>
+                <td className='font-medium p-4 text-base text-white'>Vistas</td>
                 <td className='font-medium p-4 text-base text-white'>Estado</td>
-                <td className='font-medium p-4 text-base text-white'>Price</td>
+                <td className='font-medium p-4 text-base text-white'>Precio</td>
                 <td className='font-medium p-4 text-base text-white text-center'></td>
               </tr>
             </thead>
