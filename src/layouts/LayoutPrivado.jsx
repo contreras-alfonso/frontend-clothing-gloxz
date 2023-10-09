@@ -6,7 +6,7 @@ export const LayoutPrivado = () => {
   return (
     <main className='flex'>
         <Sidebar/>
-        <div className='p-10 bg-color_bg overflow-y-auto w-full'>
+        <div className='p-10 bg-color_bg  w-full h-screen overflow-y-scroll'>
           <Outlet/>
         </div>
     </main>
