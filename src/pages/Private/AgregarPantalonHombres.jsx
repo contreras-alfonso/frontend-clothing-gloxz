@@ -62,7 +62,10 @@ export const AgregarPantalonHombres = () => {
 
            <SubidaImagen title={'3. Selecciona las imagenes que solo contienen el modelo del producto.'} selectedImages={selectedImagesModelo} setSelectedImages={setSelectedImagesModelo} onSelectFile={onSelectFileModelo}/>
 
-          <button type='submit' className='w-fit rounded-xl py-3 px-5 border border-dashed border-color-principal text-color-principal duration-300 text-sm bg-color-principal text-white'>Agregar Producto</button>
+          <div className='flex justify-end'>
+            <button type='submit' className='w-full rounded-full py-4 px-10   duration-300 text-sm bg-color-principal hover:bg-color-principal/80 text-white'>Agregar Producto</button>
+          </div>
+
         </form>
 
     </div>

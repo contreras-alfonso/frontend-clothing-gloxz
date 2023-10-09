@@ -50,7 +50,7 @@ export const Sidebar = () => {
 
     <div className={`bg-color-principal h-screen text-white p-5 pt-8 relative duration-300 ${open ? 'w-80 ' : 'w-20'}`}>
 
-        <button onClick={()=>{setOpen(!open)}} className='rounded-full bg-white text-black/80 p-4 w-1 h-1 flex items-center justify-center absolute -right-3 top-9 border border-gray-300'>{open ? <i className="fa-solid fa-chevron-left"></i> : <i className="fa-solid fa-chevron-right"></i>}</button>
+        <button onClick={()=>{setOpen(!open)}} className='text-color-principal rounded-full bg-white text-black/80 p-4 w-1 h-1 flex items-center justify-center absolute -right-3 top-9 border border-gray-300'>{open ? <i className="fa-solid fa-chevron-left"></i> : <i className="fa-solid fa-chevron-right"></i>}</button>
 
         {/* <div className='flex items-center gap-3'>
             <i className={`fa-solid fa-shop block float-left duration-500 text-3xl mr-5 ${open && "rotate-[360deg]"}`}></i>
