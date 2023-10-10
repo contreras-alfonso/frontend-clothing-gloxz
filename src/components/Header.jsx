@@ -25,7 +25,7 @@ export const Header = () => {
 
   return (
     <>
-        <header className={`bg-white fixed top-0 w-full z-40 ${shadow && 'shadow-lg'} transition-all duration-300`}>
+        <header className={`bg-white fixed top-0 w-full z-40 ${shadow && 'shadow-lg'} transition-all duration-300 `}>
             <div className='w-11/12 mx-auto py-5 flex flex-row justify-between items-center '>
                 <ul className='flex gap-5 flex-grow basis-0'>
                     <li><Link>Inicio</Link></li>

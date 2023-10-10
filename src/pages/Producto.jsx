@@ -1,15 +1,20 @@
 import React from 'react'
 import { useState } from 'react'
 import ModalProductoAgregado from '../components/ModalProductoAgregado';
+import { Carousel } from '../components/Carousel';
 
 export const Producto = () => {
 
     const [modalProductoAgregado,setModalProductoAgregado] = useState(false);
+    const slides = [
+        "https://falabella.scene7.com/is/image/FalabellaPE/882845642_2?wid=1004&hei=1500&crop=248,0,1004,1500&qlt=70",
+        "https://falabella.scene7.com/is/image/FalabellaPE/882845642_1?wid=1004&hei=1500&crop=248,0,1004,1500&qlt=70"
+    ]
 
   return (
       <>
         <div className='w-10/12 mx-auto'>
-            <div className=' mt-24 flex flex-row gap-3 py-5'>
+            <div className='mt-20 flex flex-row gap-3 py-5'>
                 <button className='text-sm'>Home</button>
                 <span><i className="fa-light fa-angle-right text-slate-500 text-sm"></i></span>
                 <button className='text-sm'>Shop</button>
@@ -20,8 +25,8 @@ export const Producto = () => {
             </div>
 
             <div className='flex gap-10 py-5'>
-                <div className='w-1/2 '>
-                    <img className='w-4/5 h-4/5 mx-auto' src="https://falabella.scene7.com/is/image/FalabellaPE/882845642_2?wid=1004&hei=1500&crop=248,0,1004,1500&qlt=70" alt="image" />
+                <div className='w-1/2'>
+                    <Carousel slides={slides}/>
                 </div>
                 <div className='w-1/2 space-y-3'>
                     <h2 className='text-sm font-medium'><span className='text-red-500'><i className="fa-regular fa-eye"></i> 24 personas</span> vieron este producto</h2>
