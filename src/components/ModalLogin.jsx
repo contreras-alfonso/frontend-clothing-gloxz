@@ -1,5 +1,6 @@
 import { Dialog, Transition } from '@headlessui/react'
 import { Fragment, useState } from 'react'
+import { Link } from 'react-router-dom'
 
 export default function ModalLogin({modalLogin, setModalLogin}) {
   let [isOpen, setIsOpen] = useState(true)
@@ -53,8 +54,8 @@ export default function ModalLogin({modalLogin, setModalLogin}) {
                             <input className='p-3 border-[1px] border-slate-200 focus:outline-none text-[15px]' type="password" placeholder='Password'/>
                         </div>
 
-                        <div className=''>
-                            <button className='w-full rounded border-black border-[1px] py-3 px-10 transition-all duration-300 bg-black text-white hover:bg-white hover:text-black '>Iniciar sesión</button>
+                        <div className='w-full flex'>
+                            <a href='/administration/hombres/pantalones' className='w-full text-center cursor-pointer rounded border-black border-[1px] py-3 px-10 transition-all duration-300 bg-black text-white hover:bg-white hover:text-black '>Iniciar sesión</a>
                         </div>
                     </div>
                   

@@ -6,7 +6,7 @@ export const TitleSeccion = ({seccion,subseccion}) => {
     <div className='flex justify-between mb-4 bg-white py-5 px-5 rounded-xl shadow-lg'>
         <div className='flex items-center gap-3'>
           <h1 className='text-3xl font-black text-color-principal'>{seccion}</h1>
-          <h2 className='font-medium text-color-principal'><i className="fa-regular fa-tags "></i>{subseccion}</h2>
+          <h2 className='font-medium text-color-principal'><i className="fa-regular fa-tags "></i>  {subseccion}</h2>
         </div>
 
           <div className='flex items-center gap-3'>

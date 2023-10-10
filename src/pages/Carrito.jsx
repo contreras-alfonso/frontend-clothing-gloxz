@@ -25,24 +25,24 @@ export const Carrito = () => {
 
             <div className='w-1/3'>
                 <div className='flex flex-col py-5 gap-5'>
-                    <h1 className='text-2xl font-bold'>Resumen de Pedido</h1>
+                    <h1 className='text-xl font-bold'>Resumen de Pedido</h1>
                     <div className='border-[1px] border-slate-200'>
                         <div className='flex justify-between border-b-[1px] border-slate-200 p-5'>
-                            <p className='text-xl text-slate-600 font-medium'>Subtotal</p>
-                            <span className='text-xl font-medium'>$59.00</span>
+                            <p className='text-base text-slate-600 font-medium'>Subtotal</p>
+                            <span className='text-base font-medium'>$59.00</span>
                         </div>
                         <div className='border-b-[1px] border-slate-200 p-5 flex flex-col gap-2'>
-                            <p className='text-lg font-medium uppercase'>Shipping</p>
-                            <p>Flat rate: $50.00</p>
+                            <p className='text-base font-medium uppercase'>Shipping</p>
+                            <p className=''>Flat rate: $50.00</p>
                             <p>Local pickup: $60.00</p>
-                            <p className='text-slate-500'>Shipping options will be updated during checkout.</p>
+                            <p className='text-slate-500 text-sm'>Shipping options will be updated during checkout.</p>
                             <button className='hover:text-rose-600'>Calculate shipping <i className="fa-regular fa-location-dot"></i></button>
                         </div>
 
                         <div className='flex flex-col p-5 gap-5'>
                             <div className='flex justify-between'>
-                                <p className='text-xl text-slate-600 font-medium'>Total</p>
-                                <span className='text-xl font-medium'>$109.00</span>
+                                <p className='text-base text-slate-600 font-medium'>Total</p>
+                                <span className='text-base font-medium'>$109.00</span>
                             </div>
                             
                             <button className='w-full rounded border-black border-[1px] py-3 px-10 transition-all duration-300 bg-black text-white hover:bg-white hover:text-black '>Comprar ahora</button>

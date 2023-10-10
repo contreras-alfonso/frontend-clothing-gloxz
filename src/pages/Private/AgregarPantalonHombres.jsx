@@ -28,11 +28,18 @@ export const AgregarPantalonHombres = () => {
         formData.append('descripcion',values.descripcion);
         formData.append('precio',values.precio);
         formData.append('sku',values.sku);
+        formData.append('stock',values.stock);
+        formData.append('genero','Hombre');
+        formData.append('tipo','Casaca');
 
         const response = await fetch(url,{
           method:'POST',
           body: formData,
         })
+
+        const data = await response.json();
+
+        console.log(data);
         
     }
 

@@ -29,11 +29,11 @@ export const Index = () => {
       <div className='py-14 flex flex-col items-center'>
         <h1 className='text-center font-bold text-3xl'>Best sellers</h1>
         <div className='mx-auto flex flex-row gap-10 w-fit pt-7'>
-          <button className='text-lg font-semibold text-gray-500 hover:text-amber-700/70'>Mens</button>
-          <button className='text-lg font-semibold text-amber-700/70 hover:text-amber-700/70'>Womens</button>
-          <button className='text-lg font-semibold text-gray-500 hover:text-amber-700/70'>Kids</button>
+          <button className='text-base font-semibold text-gray-500 hover:text-amber-700/70'>Hombres</button>
+          <button className='text-base font-semibold text-amber-700/70 hover:text-amber-700/70'>Mujeres</button>
+          <button className='text-base font-semibold text-gray-500 hover:text-amber-700/70'>Niños</button>
         </div>
-        <div className='w-3/4 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 min-w-[250px]'>
+        <div className='w-3/4 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 min-w-[250px] py-10'>
           
           <CardClothes/>
           <CardClothes/>
