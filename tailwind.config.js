@@ -11,6 +11,7 @@ export default {
         // 'color-principal': '#0d0c22',
         'color-principal': 'rgba(113,99,186,255)',
         'color-principal': '#638ACB',
+        'color-principal': '#23395b',
         'color_principal_hover': '#e0e0e058',
         'color-hover':'#565564',
         'color-amarillo-fuerte':'#ffda79',

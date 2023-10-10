@@ -3,10 +3,9 @@ import React from 'react'
 export const SubidaImagen = ({title,selectedImages,setSelectedImages,onSelectFile}) => {
   return (
     <section className='bg-white p-10 rounded-lg border-[1px] border-slate-100 mb-5  shadow-lg'>
-        <h2 className='font-light  mb-10 bg-color-principal text-white text-center w-fit p-2 px-5 text-sm rounded-lg'>{title}</h2>
+       
         <div className='w-1/2 mx-auto'>
             
-            {/* <p className='w-fit mx-auto text-color-principal text-sm rounded-full py-3 px-5 bg-color-amarillo-fuerte text-center mb-5'>{title}</p> */}
             <label className='mx-auto flex flex-col gap-2 justify-center items-center border-[2px] border-dotted border-slate-200 rounded cursor-pointer w-fit p-20 px-40 duration-300 hover:bg-color_principal_hover'>
                 <p className='font-bold text-black'><i className="fa-solid fa-cloud-arrow-up text-color-principal text-5xl"></i></p>
                 {/* <span className='text-black text-sm'>Selecciona las imagenes</span> */}

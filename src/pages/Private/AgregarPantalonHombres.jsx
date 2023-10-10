@@ -4,6 +4,7 @@ import { useImage } from '../../hooks/useImage';
 import { SubidaImagen } from '../../components/SubidaImagen';
 import { FormAgregarProducto } from '../../components/FormAgregarProducto';
 import { TitleSeccion } from '../../components/TitleSeccion';
+import { TabImage } from '../../components/TabImage';
 
 export const AgregarPantalonHombres = () => {
 
@@ -71,12 +72,15 @@ export const AgregarPantalonHombres = () => {
   return (
     <div className='overflow-y-auto'>
 
+      
+
+
         <TitleSeccion seccion={'Hombres'} subseccion={'Nuevo Producto - Pantalón'}/>
         <form onSubmit={hadnleSubmit} action="">
 
           <FormAgregarProducto values={values} handleChange={handleChange}/>
 
-          {colors.map((color,index) => (
+          {/* {colors.map((color,index) => (
             <SubidaImagen
               key={color}
               title={`${index+2}. Selecciona las imágenes del color ${color}`}
@@ -84,13 +88,16 @@ export const AgregarPantalonHombres = () => {
               setSelectedImages={colorProps[color].setSelectedImages}
               onSelectFile={colorProps[color].onSelectFile}
             />
-          ))}
+          ))} */}
+            <TabImage colors={colors} colorProps={colorProps} />
           
           <div className='flex justify-end'>
-            <button type='submit' className='w-full rounded-full py-4 px-10   duration-300 text-sm bg-color-principal hover:bg-color-principal/80 text-white'>Agregar Producto</button>
+            <button type='submit' className='w-full rounded-full py-4 px-10   duration-300 text-sm bg-color-principal hover:bg-color-principal/80 text-white uppercase font-bold'>Agregar Producto</button>
           </div>
 
         </form>
+
+       
 
     </div>
   )

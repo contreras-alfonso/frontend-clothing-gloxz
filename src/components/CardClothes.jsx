@@ -34,7 +34,7 @@ export const CardClothes = () => {
                 </li>
 
                 <li className='p-[2px] flex items-center justify-center rounded-full'>
-                  <button button className='h-[13px] w-[13px] rounded-full bg-amber-700'></button>
+                  <button className='h-[13px] w-[13px] rounded-full bg-amber-700'></button>
                 </li>
             </div>
         </div>
