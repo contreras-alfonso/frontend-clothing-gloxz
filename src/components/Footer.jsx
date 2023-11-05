@@ -3,7 +3,7 @@ import React from 'react'
 export const Footer = () => {
   return (
     <footer>
-        <div className='w-3/4 mx-auto flex flex-row justify-between gap-5 py-10'>
+        <div className='w-3/4 mx-auto flex flex-row justify-between gap-5 py-10 text-sm'>
             <div className='flex flex-col gap-3'>
                 <h2 className='font-semibold'>About shop</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>

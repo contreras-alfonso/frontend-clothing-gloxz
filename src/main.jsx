@@ -13,6 +13,7 @@ import { LayoutPrivado } from './layouts/LayoutPrivado';
 import { IndexPrivate } from './pages/Private/IndexPrivate';
 import { HombresPantalones } from './pages/Private/HombresPantalones';
 import { AgregarPantalonHombres } from './pages/Private/AgregarPantalonHombres';
+import { Shop } from './pages/Shop';
 
 const router = createBrowserRouter([
   {
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
       {
         path:'/producto/:id',
         element: <Producto/>
+      },
+      {
+        path:'/shop',
+        element: <Shop/>
       }
     ]
   },

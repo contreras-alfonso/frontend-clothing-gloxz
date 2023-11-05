@@ -13,7 +13,7 @@ export const Index = () => {
                   <h1 className='text-white  text-9xl font-black'><span className=''>30%</span> OFF</h1>
                   <p className='text-xl text-white'>For wherever summer takes you.</p>
               </div>
-              <button className='w-fit rounded border-white bg-white py-3 px-10 transition-all duration-300 hover:bg-black hover:text-white'>Comprar ahora</button>
+              <Link to={'/shop'} className='w-fit rounded border-white bg-white py-3 px-10 transition-all duration-300 hover:bg-black hover:text-white'>Comprar ahora</Link>
               
           </div>
 

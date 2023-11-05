@@ -27,6 +27,7 @@ export const TabImage = ({colors,colorProps}) => {
                         selectedImages={colorProps[color]?.selectedImages}
                         setSelectedImages={colorProps[color]?.setSelectedImages}
                         onSelectFile={colorProps[color]?.onSelectFile}
+                        onDeleteFile={colorProps[color]?.onDeleteFile}
             />
 
             </div>

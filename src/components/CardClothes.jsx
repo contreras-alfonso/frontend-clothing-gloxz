@@ -21,9 +21,9 @@ export const CardClothes = () => {
 
 
         <div className='flex flex-col gap-1 p-4 py-5'>
-            <h2 className='font-medium text-gray-500 uppercase text-sm'>NEWPORT</h2>
-            <p className='font-medium text-gray-700'>Lace Shirt Cut ll</p>
-            <p className='text-gray-500 text-base'>$16.00</p>
+            <h2 className='font-medium text-gray-600 uppercase text-sm'>NEWPORT</h2>
+            <p className='font-medium  text-gray-700'>Lace Shirt Cut ll</p>
+            <p className='text-gray-600 text-base'>$16.00 <span className='text-xs bg-rose-600 text-white rounded px-1'>-20%</span> </p>
             <div className='flex gap-2'>
                 <li className='p-[2px] flex items-center justify-center rounded-full'>
                   <button className='h-[13px] w-[13px] rounded-full bg-black'></button>

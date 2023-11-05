@@ -10,11 +10,9 @@ export const AgregarPantalonHombres = () => {
 
 
     const hadnleSubmit = async (e) => {
+
         e.preventDefault();
-        // if(Object.values(values).some(e=>e === '')){
-        //    //mostrar un error
-        // }
-        //hacer el fetch hacia algo :D
+
         const url = `http://localhost:4000/api/productos/nuevo-producto`;
         const formData = new FormData();
 
@@ -46,8 +44,6 @@ export const AgregarPantalonHombres = () => {
 
     const {values, handleChange} = useForm({marca:'',nombre:'',descripcion:'',precio:'',sku:'',stock:''});
 
-    
-
     const colors = ["Verde", "Marron", "Azul", "Beige", "Gris", "Blanco", "Rojo", "Amarillo"];
 
     const colorProps = {};
@@ -58,12 +54,14 @@ export const AgregarPantalonHombres = () => {
         setSelectedImages,
         onSelectFile,
         fileList,
+        onDeleteFile,
       } = useImage([]);
 
       colorProps[color] = {
         selectedImages,
         setSelectedImages,
         onSelectFile,
+        onDeleteFile,
         fileList,
       };
     });
@@ -72,23 +70,11 @@ export const AgregarPantalonHombres = () => {
   return (
     <div className='overflow-y-auto'>
 
-      
-
-
         <TitleSeccion seccion={'Hombres'} subseccion={'Nuevo Producto - Pantalón'}/>
         <form onSubmit={hadnleSubmit} action="">
 
           <FormAgregarProducto values={values} handleChange={handleChange}/>
 
-          {/* {colors.map((color,index) => (
-            <SubidaImagen
-              key={color}
-              title={`${index+2}. Selecciona las imágenes del color ${color}`}
-              selectedImages={colorProps[color].selectedImages}
-              setSelectedImages={colorProps[color].setSelectedImages}
-              onSelectFile={colorProps[color].onSelectFile}
-            />
-          ))} */}
             <TabImage colors={colors} colorProps={colorProps} />
           
           <div className='flex justify-end'>
@@ -96,8 +82,6 @@ export const AgregarPantalonHombres = () => {
           </div>
 
         </form>
-
-       
 
     </div>
   )
