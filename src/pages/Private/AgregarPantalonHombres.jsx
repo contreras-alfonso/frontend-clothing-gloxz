@@ -44,7 +44,7 @@ export const AgregarPantalonHombres = () => {
 
     const {values, handleChange} = useForm({marca:'',nombre:'',descripcion:'',precio:'',sku:'',stock:''});
 
-    const colors = ["Verde", "Marron", "Azul", "Beige", "Gris", "Blanco", "Rojo", "Amarillo"];
+    const colors = ["Verde", "Marron", "Azul", "Beige", "Gris", "Blanco", "Rojo", "Amarillo","Negro"]; 
 
     const colorProps = {};
 
@@ -78,7 +78,7 @@ export const AgregarPantalonHombres = () => {
             <TabImage colors={colors} colorProps={colorProps} />
           
           <div className='flex justify-end'>
-            <button type='submit' className='w-full rounded-full py-4 px-10   duration-300 text-sm bg-color-principal hover:bg-color-principal/80 text-white uppercase font-bold'>Agregar Producto</button>
+            <button type='submit' className='w-full rounded-full py-4 px-10   duration-300 text-sm bg-color-principal hover:bg-color-principal/80 text-white uppercase '>Agregar Producto</button>
           </div>
 
         </form>
